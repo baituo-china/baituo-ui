@@ -1,0 +1,16 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-pro-popup {
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.12);
+}
+.c7n-pro-popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+}

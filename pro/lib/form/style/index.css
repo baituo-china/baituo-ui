@@ -1,0 +1,62 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-pro-form-header {
+  border-bottom: 0.01rem solid #e0e0e0;
+  padding: .08rem;
+  font-size: .16rem;
+  font-weight: 400;
+  margin-bottom: .1rem;
+}
+.c7n-pro-form > table {
+  width: 100%;
+  table-layout: fixed;
+}
+.c7n-pro-form > table > tbody > tr > td {
+  vertical-align: top;
+}
+.c7n-pro-form-float-label {
+  margin: 0 -0.05rem;
+}
+.c7n-pro-form-float-label .c7n-pro-form-header {
+  margin-left: .05rem;
+  margin-right: .05rem;
+}
+.c7n-pro-form-float-label .c7n-pro-field-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.07rem;
+  margin-bottom: 0.2rem;
+}
+.c7n-pro-form-float-label .c7n-pro-validation-message + .c7n-pro-field-help {
+  display: none;
+}
+.c7n-pro-form {
+  content: "xs";
+}
+@media (min-width: 576px) {
+  .c7n-pro-form {
+    content: "sm";
+  }
+}
+@media (min-width: 768px) {
+  .c7n-pro-form {
+    content: "md";
+  }
+}
+@media (min-width: 992px) {
+  .c7n-pro-form {
+    content: "lg";
+  }
+}
+@media (min-width: 1200px) {
+  .c7n-pro-form {
+    content: "xl";
+  }
+}
+@media (min-width: 1600px) {
+  .c7n-pro-form {
+    content: "xxl";
+  }
+}

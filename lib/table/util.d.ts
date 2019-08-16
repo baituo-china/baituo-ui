@@ -1,0 +1,11 @@
+import { ReactChildren } from 'react';
+import { ColumnProps } from './interface';
+export declare function flatArray(data?: any[], childrenName?: string): any[];
+export declare function treeMap<Node>(tree: Node[], mapper: (node: Node, index: number) => any, childrenName?: string): any[];
+export declare function flatFilter<T>(tree: ColumnProps<T>[], callback: (node: ColumnProps<T>) => any): ColumnProps<T>[];
+export declare function normalizeColumns(elements: ReactChildren): any[];
+export declare function getLeafColumns<T>(columns: ColumnProps<T>[]): ColumnProps<T>[];
+export declare function findColumnByFilterValue<T>(record: T, columns: ColumnProps<T>[], inputValue: string): ColumnProps<T> | undefined;
+export declare function filterByInputValue<T>(dataSource: T[], columns: ColumnProps<T>[], inputValue: string, cb: (record: T, column: ColumnProps<T>) => void): void;
+export declare function removeHiddenColumns<T>(columns: ColumnProps<T>[]): ColumnProps<T>[];
+export declare function getColumnKey<T>(column: ColumnProps<T>, index?: number): string | number | undefined;

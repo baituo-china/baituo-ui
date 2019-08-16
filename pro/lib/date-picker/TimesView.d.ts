@@ -1,0 +1,33 @@
+import { ReactNode } from 'react';
+import { Moment, unitOfTime } from 'moment';
+import DaysView from './DaysView';
+import { FieldType } from '../data-set/enum';
+export default class TimesView extends DaysView {
+    static displayName: string;
+    static type: FieldType;
+    currentUnit?: unitOfTime.Base;
+    handleDateTimeSelect(): void;
+    handleKeyDownHome(): void;
+    handleKeyDownEnd(): void;
+    handleKeyDownLeft(e: any): void;
+    handleKeyDownRight(e: any): void;
+    handleKeyDownUp(): void;
+    handleKeyDownDown(): void;
+    handleKeyDownPageUp(): void;
+    handleKeyDownPageDown(): void;
+    handleKeyDownEnter(): void;
+    handleTimeCellClick(date: Moment, unit: unitOfTime.Base): void;
+    handleWheel(e: any): Promise<void>;
+    renderHeader(): ReactNode;
+    renderFooter(): ReactNode;
+    renderPanel(): JSX.Element;
+    renderPanelBody(): ReactNode;
+    renderCell(props: object): ReactNode;
+    getTimeBar(unit: unitOfTime.Base): ReactNode;
+    getPanelClass(): string;
+    getCurrentUnit(): unitOfTime.Base;
+    getPrevUnit(): unitOfTime.Base;
+    getNextUnit(): unitOfTime.Base;
+    changeUnit(unit: any): void;
+    choose(date: Moment): void;
+}

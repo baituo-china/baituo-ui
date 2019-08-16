@@ -1,0 +1,72 @@
+import React, { CSSProperties, Key } from 'react';
+import PropTypes from 'prop-types';
+import Align from '../../../lib/align';
+import ViewComponent, { ViewComponentProps } from '../core/ViewComponent';
+export interface PopupProps extends ViewComponentProps {
+    align: object;
+    onAlign?: (source: Node, align: object, target: Node | Window) => void;
+    getRootDomNode?: () => Node;
+    transitionName?: string;
+    onAnimateAppear?: (key: Key | null) => void;
+    onAnimateEnter?: (key: Key | null) => void;
+    onAnimateLeave?: (key: Key | null) => void;
+    onAnimateEnd?: (key: Key | null, exists: boolean) => void;
+    getStyleFromAlign?: (target: Node | Window, align: object) => object | undefined;
+    getClassNameFromAlign?: (align: object) => string | undefined;
+}
+export default class Popup extends ViewComponent<PopupProps> {
+    static displayName: string;
+    static propTypes: {
+        id: PropTypes.Requireable<string>;
+        size: PropTypes.Requireable<import("../core/enum").Size>;
+        suffixCls: PropTypes.Requireable<string>;
+        prefixCls: PropTypes.Requireable<string>;
+        title: PropTypes.Requireable<string>;
+        disabled: PropTypes.Requireable<boolean>;
+        hidden: PropTypes.Requireable<boolean>;
+        autoFocus: PropTypes.Requireable<boolean>;
+        style: PropTypes.Requireable<object>;
+        className: PropTypes.Requireable<string>;
+        tabIndex: PropTypes.Requireable<number>;
+        lang: PropTypes.Requireable<string>;
+        onFocus: PropTypes.Requireable<(...args: any[]) => any>;
+        onBlur: PropTypes.Requireable<(...args: any[]) => any>;
+        onClick: PropTypes.Requireable<(...args: any[]) => any>;
+        onDoubleClick: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseUp: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseDown: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseMove: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseEnter: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseLeave: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseOver: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseOut: PropTypes.Requireable<(...args: any[]) => any>;
+        onContextMenu: PropTypes.Requireable<(...args: any[]) => any>;
+        onKeyDown: PropTypes.Requireable<(...args: any[]) => any>;
+        onKeyUp: PropTypes.Requireable<(...args: any[]) => any>;
+        onKeyPress: PropTypes.Requireable<(...args: any[]) => any>;
+        align: PropTypes.Requireable<object>;
+        onAlign: PropTypes.Requireable<(...args: any[]) => any>;
+        getRootDomNode: PropTypes.Requireable<(...args: any[]) => any>;
+        transitionName: PropTypes.Requireable<string>;
+        onAnimateAppear: PropTypes.Requireable<(...args: any[]) => any>;
+        onAnimateEnter: PropTypes.Requireable<(...args: any[]) => any>;
+        onAnimateLeave: PropTypes.Requireable<(...args: any[]) => any>;
+        onAnimateEnd: PropTypes.Requireable<(...args: any[]) => any>;
+        getStyleFromAlign: PropTypes.Requireable<(...args: any[]) => any>;
+        getClassNameFromAlign: PropTypes.Requireable<(...args: any[]) => any>;
+    };
+    static defaultProps: {
+        suffixCls: string;
+        transitionName: string;
+    };
+    currentAlignClassName?: string;
+    currentAlignStyle?: CSSProperties;
+    align: Align | null;
+    contentRendered: boolean;
+    popupKey: string;
+    saveRef: (align: any) => any;
+    getOtherProps(): Pick<any, string | number | symbol>;
+    render(): React.ReactPortal | null;
+    onAlign(source: any, align: any, target: any): void;
+    forceAlign(): void;
+}

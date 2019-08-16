@@ -1,0 +1,238 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-tag {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.13rem;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  line-height: .2rem;
+  height: .22rem;
+  padding: 0 .07rem;
+  border-radius: 0.02rem;
+  border: 0.01rem solid #e0e0e0;
+  background: #3f51b5;
+  font-size: 0.12rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 1;
+  margin-right: .08rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.c7n-tag:hover {
+  opacity: .85;
+}
+.c7n-tag,
+.c7n-tag a,
+.c7n-tag a:hover {
+  color: #fff;
+}
+.c7n-tag > a:first-child:last-child {
+  display: inline-block;
+  margin: 0 -0.08remx;
+  padding: 0 .08rem;
+}
+.c7n-tag .icon-close {
+  display: inline-block;
+  font-size: .12rem;
+  font-size: 0.1rem \9;
+  -webkit-transform: scale(0.83333333) rotate(0deg);
+      -ms-transform: scale(0.83333333) rotate(0deg);
+          transform: scale(0.83333333) rotate(0deg);
+  cursor: pointer;
+  margin-left: .03rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-weight: bold;
+}
+:root .c7n-tag .icon-close {
+  font-size: 0.12rem;
+}
+.c7n-tag-has-color {
+  border-color: transparent;
+}
+.c7n-tag-has-color,
+.c7n-tag-has-color a,
+.c7n-tag-has-color a:hover,
+.c7n-tag-has-color .icon-close,
+.c7n-tag-has-color .icon-close:hover {
+  color: #fff;
+}
+.c7n-tag-checkable {
+  background-color: transparent;
+  border-color: transparent;
+}
+.c7n-tag-checkable:not(.c7n-tag-checkable-checked):hover {
+  color: #3f51b5;
+}
+.c7n-tag-checkable,
+.c7n-tag-checkable a,
+.c7n-tag-checkable a:hover {
+  color: #000;
+}
+.c7n-tag-checkable:active,
+.c7n-tag-checkable-checked {
+  color: #fff;
+}
+.c7n-tag-checkable-checked {
+  background-color: #3f51b5;
+}
+.c7n-tag-checkable:active {
+  background-color: #2b378f;
+}
+.c7n-tag-close {
+  width: 0 !important;
+  padding: 0;
+  margin: 0;
+}
+.c7n-tag-zoom-enter,
+.c7n-tag-zoom-appear {
+  -webkit-animation: antFadeIn 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation: antFadeIn 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.c7n-tag-zoom-leave {
+  -webkit-animation: antZoomOut 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          animation: antZoomOut 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.c7n-tag-pink {
+  color: #eb2f96;
+  background: #fff0f6;
+  border-color: #ffadd2;
+}
+.c7n-tag-pink-inverse {
+  background: #eb2f96;
+  border-color: #eb2f96;
+  color: #fff;
+}
+.c7n-tag-magenta {
+  color: #eb2f96;
+  background: #fff0f6;
+  border-color: #ffadd2;
+}
+.c7n-tag-magenta-inverse {
+  background: #eb2f96;
+  border-color: #eb2f96;
+  color: #fff;
+}
+.c7n-tag-red {
+  color: #d50000;
+  background: #ffeae6;
+  border-color: #fc8679;
+}
+.c7n-tag-red-inverse {
+  background: #d50000;
+  border-color: #d50000;
+  color: #fff;
+}
+.c7n-tag-volcano {
+  color: #fa541c;
+  background: #fff2e8;
+  border-color: #ffbb96;
+}
+.c7n-tag-volcano-inverse {
+  background: #fa541c;
+  border-color: #fa541c;
+  color: #fff;
+}
+.c7n-tag-orange {
+  color: #fa8c16;
+  background: #fff7e6;
+  border-color: #ffd591;
+}
+.c7n-tag-orange-inverse {
+  background: #fa8c16;
+  border-color: #fa8c16;
+  color: #fff;
+}
+.c7n-tag-yellow {
+  color: #fadb14;
+  background: #feffe6;
+  border-color: #fffb8f;
+}
+.c7n-tag-yellow-inverse {
+  background: #fadb14;
+  border-color: #fadb14;
+  color: #fff;
+}
+.c7n-tag-gold {
+  color: #faad14;
+  background: #fffbe6;
+  border-color: #ffe58f;
+}
+.c7n-tag-gold-inverse {
+  background: #faad14;
+  border-color: #faad14;
+  color: #fff;
+}
+.c7n-tag-cyan {
+  color: #13c2c2;
+  background: #e6fffb;
+  border-color: #87e8de;
+}
+.c7n-tag-cyan-inverse {
+  background: #13c2c2;
+  border-color: #13c2c2;
+  color: #fff;
+}
+.c7n-tag-lime {
+  color: #a0d911;
+  background: #fcffe6;
+  border-color: #eaff8f;
+}
+.c7n-tag-lime-inverse {
+  background: #a0d911;
+  border-color: #a0d911;
+  color: #fff;
+}
+.c7n-tag-green {
+  color: #00bf96;
+  background: #e6fff5;
+  border-color: #6ee6c0;
+}
+.c7n-tag-green-inverse {
+  background: #00bf96;
+  border-color: #00bf96;
+  color: #fff;
+}
+.c7n-tag-blue {
+  color: #3f51b5;
+  background: #e6ebf5;
+  border-color: #b6bfdb;
+}
+.c7n-tag-blue-inverse {
+  background: #3f51b5;
+  border-color: #3f51b5;
+  color: #fff;
+}
+.c7n-tag-geekblue {
+  color: #2f54eb;
+  background: #f0f5ff;
+  border-color: #adc6ff;
+}
+.c7n-tag-geekblue-inverse {
+  background: #2f54eb;
+  border-color: #2f54eb;
+  color: #fff;
+}
+.c7n-tag-purple {
+  color: #8e44ad;
+  background: #ebdfed;
+  border-color: #ceb8d4;
+}
+.c7n-tag-purple-inverse {
+  background: #8e44ad;
+  border-color: #8e44ad;
+  color: #fff;
+}

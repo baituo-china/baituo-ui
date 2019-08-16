@@ -1,0 +1,1 @@
+import '../../../../lib/message/style';

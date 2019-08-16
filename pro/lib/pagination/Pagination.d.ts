@@ -1,0 +1,82 @@
+import { ReactNode } from 'react';
+import PropTypes from 'prop-types';
+import DataSetComponent, { DataSetComponentProps } from '../data-set/DataSetComponent';
+export declare type PagerType = 'page' | 'prev' | 'next' | 'first' | 'last' | 'jump-prev' | 'jump-next';
+export interface PaginationProps extends DataSetComponentProps {
+    total?: number;
+    page?: number;
+    pageSize?: number;
+    onChange?: (page: number, pageSize: number) => void;
+    itemRender?: (page: number, type: PagerType) => ReactNode;
+    pageSizeOptions?: string[];
+    showSizeChanger?: boolean;
+    showTotal?: boolean;
+    showPager?: boolean;
+}
+export default class Pagination extends DataSetComponent<PaginationProps> {
+    static displayName: string;
+    static propTypes: {
+        id: PropTypes.Requireable<string>;
+        size: PropTypes.Requireable<import("../core/enum").Size>;
+        suffixCls: PropTypes.Requireable<string>;
+        prefixCls: PropTypes.Requireable<string>;
+        title: PropTypes.Requireable<string>;
+        disabled: PropTypes.Requireable<boolean>;
+        hidden: PropTypes.Requireable<boolean>;
+        autoFocus: PropTypes.Requireable<boolean>;
+        style: PropTypes.Requireable<object>;
+        className: PropTypes.Requireable<string>;
+        tabIndex: PropTypes.Requireable<number>;
+        lang: PropTypes.Requireable<string>;
+        onFocus: PropTypes.Requireable<(...args: any[]) => any>;
+        onBlur: PropTypes.Requireable<(...args: any[]) => any>;
+        onClick: PropTypes.Requireable<(...args: any[]) => any>;
+        onDoubleClick: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseUp: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseDown: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseMove: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseEnter: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseLeave: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseOver: PropTypes.Requireable<(...args: any[]) => any>;
+        onMouseOut: PropTypes.Requireable<(...args: any[]) => any>;
+        onContextMenu: PropTypes.Requireable<(...args: any[]) => any>;
+        onKeyDown: PropTypes.Requireable<(...args: any[]) => any>;
+        onKeyUp: PropTypes.Requireable<(...args: any[]) => any>;
+        onKeyPress: PropTypes.Requireable<(...args: any[]) => any>;
+        dataSet: PropTypes.Requireable<object>;
+        total: PropTypes.Requireable<number>;
+        page: PropTypes.Requireable<number>;
+        pageSize: PropTypes.Requireable<number>;
+        onChange: PropTypes.Requireable<(...args: any[]) => any>;
+        itemRender: PropTypes.Requireable<(...args: any[]) => any>;
+        showSizeChanger: PropTypes.Requireable<boolean>;
+        showTotal: PropTypes.Requireable<boolean>;
+        showPager: PropTypes.Requireable<boolean>;
+    };
+    static defaultProps: {
+        suffixCls: string;
+        pageSizeOptions: string[];
+        showSizeChanger: boolean;
+        showTotal: boolean;
+    };
+    readonly pageSize: number;
+    readonly page: number;
+    readonly total: number | undefined;
+    readonly totalPage: number;
+    getObservableProps(props: any, context: any): {
+        page: any;
+        pageSize: any;
+        total: any;
+        dataSet: any;
+    };
+    handlePageSizeChange: (value: number) => void;
+    handleChange(page: number, pageSize: number): void;
+    handlePagerClick: (page: any) => void;
+    getOtherProps(): Pick<Pick<any, string | number | symbol>, string | number | symbol>;
+    getOptions(): ReactNode;
+    getPager(page: number, type: PagerType, active?: boolean, disabled?: boolean): JSX.Element;
+    renderPagers(page: number): ReactNode;
+    renderSizeChange(pageSize: number): ReactNode;
+    renderTotal(pageSize: number, page: number, total: number): ReactNode;
+    render(): JSX.Element | null;
+}

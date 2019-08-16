@@ -1,0 +1,34 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-pro-dropdown-popup.slide-down-enter.slide-down-enter-active.c7n-pro-dropdown-popup-placement-bottomLeft,
+.c7n-pro-dropdown-popup.slide-down-appear.slide-down-appear-active.c7n-pro-dropdown-popup-placement-bottomLeft,
+.c7n-pro-dropdown-popup.slide-down-enter.slide-down-enter-active.c7n-pro-dropdown-popup-placement-bottomCenter,
+.c7n-pro-dropdown-popup.slide-down-appear.slide-down-appear-active.c7n-pro-dropdown-popup-placement-bottomCenter,
+.c7n-pro-dropdown-popup.slide-down-enter.slide-down-enter-active.c7n-pro-dropdown-popup-placement-bottomRight,
+.c7n-pro-dropdown-popup.slide-down-appear.slide-down-appear-active.c7n-pro-dropdown-popup-placement-bottomRight {
+  -webkit-animation-name: antSlideUpIn;
+          animation-name: antSlideUpIn;
+}
+.c7n-pro-dropdown-popup.slide-up-enter.slide-up-enter-active.c7n-pro-dropdown-popup-placement-topLeft,
+.c7n-pro-dropdown-popup.slide-up-appear.slide-up-appear-active.c7n-pro-dropdown-popup-placement-topLeft,
+.c7n-pro-dropdown-popup.slide-up-enter.slide-up-enter-active.c7n-pro-dropdown-popup-placement-topCenter,
+.c7n-pro-dropdown-popup.slide-up-appear.slide-up-appear-active.c7n-pro-dropdown-popup-placement-topCenter,
+.c7n-pro-dropdown-popup.slide-up-enter.slide-up-enter-active.c7n-pro-dropdown-popup-placement-topRight,
+.c7n-pro-dropdown-popup.slide-up-appear.slide-up-appear-active.c7n-pro-dropdown-popup-placement-topRight {
+  -webkit-animation-name: antSlideDownIn;
+          animation-name: antSlideDownIn;
+}
+.c7n-pro-dropdown-popup.slide-down-leave.slide-down-leave-active.c7n-pro-dropdown-popup-placement-bottomLeft,
+.c7n-pro-dropdown-popup.slide-down-leave.slide-down-leave-active.c7n-pro-dropdown-popup-placement-bottomCenter,
+.c7n-pro-dropdown-popup.slide-down-leave.slide-down-leave-active.c7n-pro-dropdown-popup-placement-bottomRight {
+  -webkit-animation-name: antSlideUpOut;
+          animation-name: antSlideUpOut;
+}
+.c7n-pro-dropdown-popup.slide-up-leave.slide-up-leave-active.c7n-pro-dropdown-popup-placement-topLeft,
+.c7n-pro-dropdown-popup.slide-up-leave.slide-up-leave-active.c7n-pro-dropdown-popup-placement-topCenter,
+.c7n-pro-dropdown-popup.slide-up-leave.slide-up-leave-active.c7n-pro-dropdown-popup-placement-topRight {
+  -webkit-animation-name: antSlideDownOut;
+          animation-name: antSlideDownOut;
+}

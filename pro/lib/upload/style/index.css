@@ -1,0 +1,89 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-pro-upload {
+  display: inline-block;
+}
+.c7n-pro-upload .flex-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.c7n-pro-upload-select {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: .1rem;
+}
+.c7n-pro-upload-select input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.c7n-pro-upload-name {
+  margin-left: .05rem;
+}
+.c7n-pro-upload:focus {
+  outline: none;
+}
+.c7n-pro-upload-list {
+  border-radius: 0.02rem;
+  border: 0.01rem solid #e0e0e0;
+  border-bottom: none;
+  margin-top: .05rem;
+}
+.c7n-pro-upload-list-empty {
+  display: none;
+}
+.c7n-pro-upload-list-item {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.01rem solid #e0e0e0;
+  padding: .05rem .1rem;
+}
+.c7n-pro-upload-list-item-name {
+  padding-left: .2rem;
+}
+.c7n-pro-upload-list-item-progress {
+  width: 100%;
+  display: inline-block;
+  padding-left: .2rem;
+}
+.c7n-pro-upload-list-item-icon {
+  top: .09rem;
+}
+.c7n-pro-upload-list-item-remove {
+  cursor: pointer;
+  right: .1rem;
+  margin-left: auto;
+}
+.c7n-pro-upload-list-item-error {
+  color: #d50000;
+}
+.c7n-pro-upload-list-item-success {
+  color: #00bf96;
+}

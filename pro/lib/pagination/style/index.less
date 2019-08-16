@@ -1,0 +1,22 @@
+@import "../../../../lib/style/themes/default";
+@import "../../../../lib/style/mixins/index";
+
+.@{c7n-pro-prefix}-pagination {
+  line-height: .3rem;
+  > * {
+    vertical-align: text-bottom;
+  }
+  .@{c7n-pro-prefix}-select {
+    text-align: right;
+    border: none;
+    &-wrapper {
+      width: .8rem;
+    }
+  }
+  &-page-info {
+    margin: 0 .2rem;
+  }
+  &-pager {
+    height: @btn-circle-size;
+  }
+}

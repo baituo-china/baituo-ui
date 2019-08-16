@@ -1,0 +1,287 @@
+@import "../../style/themes/default";
+@import "../../style/mixins/index";
+@import "./ripple";
+@import "./mixin";
+
+@btn-prefix-cls: ~"@{c7n-prefix}-btn";
+
+// for compatibile
+@btn-ghost-color: @text-color;
+@btn-ghost-bg: transparent;
+@btn-ghost-border: @border-color-base;
+
+// Button styles
+// -----------------------------
+.@{btn-prefix-cls} {
+   line-height: @btn-height-base;
+  .btn;
+  .btn-default;
+  // Make sure that the target of Button's click event always be `button`
+
+  > i.@{iconfont-css-prefix} {
+    pointer-events: none;
+    display: inline-block;
+    vertical-align: top;
+    line-height: inherit;
+  }
+  > span {
+    display: inline-block;
+  }
+  > i.@{iconfont-css-prefix} + span,
+  > span + i.@{iconfont-css-prefix} {
+    margin-left: .04rem;
+  }
+  > div.btn-loading {
+    display: inline-block;
+    width: .32rem;
+    margin-right: .04rem;
+
+    > span {
+      background: #000;
+      border-color: #000;
+      display: inline-block;
+      border-radius: 50%;
+      width: .07rem;
+      height: .07rem;
+    }
+    .dot1 {
+      opacity: 1;
+      transform: scale(1);
+      animation: btn-loading .4s cubic-bezier(0.4, 0, 0.2, 1) 0.07s infinite normal;
+    }
+    .dot2 {
+      margin: 0 .03rem;
+      opacity: 0.9;
+      transform: scale(0.7);
+      animation: btn-loading .4s cubic-bezier(0.4, 0, 0.2, 1) .17s infinite normal;
+    }
+    .dot3 {
+      opacity: 0.9;
+      transform: scale(0.7);
+      animation: btn-loading .4s cubic-bezier(0.4, 0, 0.2, 1) .27s infinite normal;
+    }
+  }
+
+  &-flat&-primary {
+    .btn-flat-primary;
+
+    .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
+      border-right-color: @btn-group-border;
+      border-left-color: @btn-group-border;
+
+      &:disabled {
+        border-color: @btn-default-border;
+      }
+    }
+
+    .@{btn-prefix-cls}-group &:first-child {
+      &:not(:last-child) {
+        border-right-color: @btn-group-border;
+        &[disabled] {
+          border-right-color: @btn-default-border;
+        }
+      }
+    }
+
+    .@{btn-prefix-cls}-group &:last-child:not(:first-child),
+    .@{btn-prefix-cls}-group & + & {
+      border-left-color: @btn-group-border;
+      &[disabled] {
+        border-left-color: @btn-default-border;
+      }
+    }
+  }
+
+  &-raised&-primary {
+    .btn-raised-primary;
+
+    .@{btn-prefix-cls}-group &:not(:first-child):not(:last-child) {
+      border-right-color: @btn-group-border;
+      border-left-color: @btn-group-border;
+
+      &:disabled {
+        border-color: @btn-default-border;
+      }
+    }
+
+    .@{btn-prefix-cls}-group &:first-child {
+      &:not(:last-child) {
+        border-right-color: @btn-group-border;
+        &[disabled] {
+          border-right-color: @btn-default-border;
+        }
+      }
+    }
+
+    .@{btn-prefix-cls}-group &:last-child:not(:first-child),
+    .@{btn-prefix-cls}-group & + & {
+      border-left-color: @btn-group-border;
+      &[disabled] {
+        border-left-color: @btn-default-border;
+      }
+    }
+  }
+  &-ghost {
+    .btn-ghost;
+  }
+
+  &-dashed {
+    .btn-dashed;
+    line-height: @btn-height-base - .04rem;
+  }
+
+  &-danger {
+    .btn-danger;
+  }
+
+  &-circle,
+  &-circle-outline {
+    .btn-circle(@btn-prefix-cls);
+    & >i.@{iconfont-css-prefix} {
+      margin: 0;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    top: -.01rem;
+    left: -.01rem;
+    bottom: -.01rem;
+    right: -.01rem;
+    background: #fff;
+    opacity: 0.35;
+    content: '';
+    border-radius: inherit;
+    z-index: 1;
+    transition: opacity .2s;
+    pointer-events: none;
+    display: none;
+  }
+
+  .@{iconfont-css-prefix} {
+    transition: margin-left .3s @ease-in-out;
+  }
+
+  &&-loading:not(&-circle):not(&-circle-outline):not(&-icon-only) {
+    pointer-events: none;
+  }
+
+  &-group {
+    .btn-group(@btn-prefix-cls);
+  }
+
+  &:not(&-circle):not(&-circle-outline)&-icon-only {
+    padding-left: .08rem;
+    padding-right: .08rem;
+  }
+
+  // http://stackoverflow.com/a/21281554/3040605
+  &:focus > span,
+  &:active > span {
+    position: relative;
+  }
+
+  &-clicked:after {
+    content: '';
+    position: absolute;
+    top: -.01rem;
+    left: -.01rem;
+    bottom: -.01rem;
+    right: -.01rem;
+    border-radius: inherit;
+    border: 0 solid @primary-color;
+    opacity: 0.4;
+    display: block;
+  }
+
+  &-danger&-clicked:after {
+    border-color: @btn-danger-color;
+  }
+
+  &-background-ghost {
+    background: transparent !important;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &-background-ghost&-primary {
+    .button-variant-ghost(@btn-primary-bg);
+  }
+
+  &-background-ghost&-danger {
+    .button-variant-ghost(@btn-danger-color);
+  }
+
+  &-two-chinese-chars:first-letter {
+    letter-spacing: .34em;
+  }
+
+  &-two-chinese-chars > * {
+    letter-spacing: .34em;
+    margin-right: -.34em;
+  }
+
+  &-raised {
+    box-shadow: @btn-box-shadow;
+    transition: background .4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow .28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &:not([disabled]):active {
+      box-shadow: @btn-active-box-shadow;
+    }
+  }
+
+  &-flat&-loading {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: @btn-active-box-shadow;
+  }
+
+  &-raised&-loading {
+    box-shadow: @btn-active-box-shadow;
+  }
+
+  &-flat {
+    &:hover {
+      background: @btn-hover-default-color;
+    }
+  }
+}
+
+@keyframes buttonEffect {
+  to {
+    opacity: 0;
+    top: -.06rem;
+    left: -.06rem;
+    bottom: -.06rem;
+    right: -.06rem;
+    border-width: .06rem;
+  }
+}
+
+a.@{btn-prefix-cls} {
+  line-height: @btn-height-base - .02rem;
+  &-lg {
+    line-height: @btn-height-lg - .02rem;
+  }
+  &-sm {
+    line-height: @btn-height-sm - .02rem;
+  }
+}
+
+@keyframes btn-loading {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  33.3% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  66.6% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+}

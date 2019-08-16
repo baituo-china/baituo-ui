@@ -1,0 +1,89 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-avatar {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.13rem;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  background: #ccc;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 0.32rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  border-radius: 50%;
+}
+.c7n-avatar-image {
+  background: transparent;
+}
+.c7n-avatar > * {
+  line-height: 0.32rem;
+}
+.c7n-avatar-string {
+  position: absolute;
+  left: 50%;
+  -webkit-transform-origin: 0 center;
+      -ms-transform-origin: 0 center;
+          transform-origin: 0 center;
+}
+.c7n-avatar.c7n-avatar-icon {
+  font-size: 0.18rem;
+}
+.c7n-avatar-lg {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 50%;
+}
+.c7n-avatar-lg > * {
+  line-height: 0.4rem;
+}
+.c7n-avatar-lg-string {
+  position: absolute;
+  left: 50%;
+  -webkit-transform-origin: 0 center;
+      -ms-transform-origin: 0 center;
+          transform-origin: 0 center;
+}
+.c7n-avatar-lg.c7n-avatar-icon {
+  font-size: 0.24rem;
+}
+.c7n-avatar-sm {
+  width: 0.24rem;
+  height: 0.24rem;
+  line-height: 0.24rem;
+  border-radius: 50%;
+}
+.c7n-avatar-sm > * {
+  line-height: 0.24rem;
+}
+.c7n-avatar-sm-string {
+  position: absolute;
+  left: 50%;
+  -webkit-transform-origin: 0 center;
+      -ms-transform-origin: 0 center;
+          transform-origin: 0 center;
+}
+.c7n-avatar-sm.c7n-avatar-icon {
+  font-size: 0.14rem;
+}
+.c7n-avatar-square {
+  border-radius: 0.02rem;
+}
+.c7n-avatar > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

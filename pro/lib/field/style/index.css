@@ -1,0 +1,60 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-pro-field {
+  display: inline-block;
+  width: 100%;
+}
+.c7n-pro-field-label,
+.c7n-pro-field-label-vertical {
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 2.15384615;
+}
+.c7n-pro-field-label label,
+.c7n-pro-field-label-vertical label {
+  display: inline-block;
+}
+.c7n-pro-field-label-right,
+.c7n-pro-field-label-vertical-right {
+  text-align: right;
+}
+.c7n-pro-field-label-center,
+.c7n-pro-field-label-vertical-center {
+  text-align: center;
+}
+.c7n-pro-field-label,
+.c7n-pro-field-wrapper {
+  padding: .1rem .05rem;
+}
+.c7n-pro-field-label-vertical {
+  text-align: left;
+  direction: ltr;
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.c7n-pro-field-label-vertical + .c7n-pro-field-wrapper {
+  padding-top: 0;
+}
+.c7n-pro-field-label:after {
+  display: inline-block;
+  line-height: 1;
+  margin-left: .04rem;
+  color: #d50000;
+  width: .08rem;
+  vertical-align: middle;
+  content: " ";
+  font-family: SimSun;
+}
+.c7n-pro-field-required.c7n-pro-field-label:after {
+  content: "*";
+}
+.c7n-pro-field-help {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: small;
+  word-break: break-all;
+}

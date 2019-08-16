@@ -1,0 +1,118 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
+  background: #f0f2f5;
+}
+.c7n-layout,
+.c7n-layout * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.c7n-layout.c7n-layout-has-sider {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.c7n-layout.c7n-layout-has-sider > .c7n-layout,
+.c7n-layout.c7n-layout-has-sider > .c7n-layout-content {
+  overflow-x: hidden;
+}
+.c7n-layout-header,
+.c7n-layout-footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.c7n-layout-header {
+  background: #001529;
+  padding: 0 0.5rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+}
+.c7n-layout-footer {
+  background: #f0f2f5;
+  padding: 0.24rem 0.5rem;
+  color: #000000;
+  font-size: 0.13rem;
+}
+.c7n-layout-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
+}
+.c7n-layout-sider {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  background: #001529;
+  /* fix firefox can't set width smaller than content on flex item */
+  min-width: 0;
+}
+.c7n-layout-sider-children {
+  height: 100%;
+  padding-top: .001rem;
+  margin-top: -0.001rem;
+}
+.c7n-layout-sider-has-trigger {
+  padding-bottom: 0.48rem;
+}
+.c7n-layout-sider-right {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.c7n-layout-sider-trigger {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  cursor: pointer;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  color: #fff;
+  background: #002140;
+  z-index: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.c7n-layout-sider-zero-width > * {
+  overflow: hidden;
+}
+.c7n-layout-sider-zero-width-trigger {
+  position: absolute;
+  top: 0.64rem;
+  right: -0.36rem;
+  text-align: center;
+  width: 0.36rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  background: #001529;
+  color: #fff;
+  font-size: 0.18rem;
+  border-radius: 0 0.02rem 0.02rem 0;
+  cursor: pointer;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+.c7n-layout-sider-zero-width-trigger:hover {
+  background: #192c3e;
+}

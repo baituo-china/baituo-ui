@@ -1,0 +1,82 @@
+@import "../../style/themes/default";
+@import "../../style/mixins/index";
+
+@input-number-prefix-cls: ~"@{c7n-prefix}-input-number";
+
+.@{input-number-prefix-cls} {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+
+  &-handler {
+    text-align: center;
+    line-height: 0;
+    height: .1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.1s linear;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover &-up-inner,
+    &:hover &-down-inner {
+      color: @primary-5;
+    }
+  }
+
+  &-handler-up-inner,
+  &-handler-down-inner {
+    user-select: none;
+    transition: all 0.1s linear;
+    cursor: pointer;
+  }
+
+  &-handler-up-inner {
+    position: absolute;
+    bottom: -.05rem;
+    right: .02rem;
+  }
+  &-handler-down-inner {
+    position: absolute;
+    top: -.05rem;
+    right: .02rem;
+  }
+
+  &-disabled {
+    .@{input-number-prefix-cls}-handler-wrap {
+      display: none;
+    }
+  }
+
+  &-handler-wrap {
+    width: .22rem;
+    height: .2rem;
+    background: @component-background;
+    color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: .01rem;
+    opacity: 0;
+    border-radius: 0 @border-radius-base @border-radius-base 0;
+    transition: opacity 0.24s linear 0.1s;
+    z-index: 2;
+    margin: auto;
+  }
+
+  &:hover &-handler-wrap {
+    opacity: 1;
+  }
+
+  &-handler-up-disabled,
+  &-handler-down-disabled {
+    cursor: not-allowed;
+  }
+
+  &-handler-up-disabled:hover &-handler-up-inner,
+  &-handler-down-disabled:hover &-handler-down-inner {
+    color: @disabled-color;
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "_from": "baituo-ui",
+  "_id": "baituo-ui@0.8.3",
+  "_inBundle": false,
+  "_integrity": "sha512-E+kK62nTKM3KcCLCF+qsP4BXJQnUGcB/N/i4LdY5lCzUeINA+PqgtGWjbkUzB66VF9dNBJ/VuALYI/4bnnohvA==",
+  "_location": "/baituo-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "baituo-ui",
+    "name": "baituo-ui",
+    "escapedName": "baituo-ui",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "",
+  "_shasum": "790fb932b75cb566eb03cf240f7357d2eb994337",
+  "_spec": "baituo-ui",
+  "_where": "E:/job/",
+  "bugs": {
+    
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "baituo"
+    }
+  ],
+  "dependencies": {
+    "add-dom-event-listener": "1.x",
+    "array-tree-filter": "^2.0.0",
+    "async-validator": "1.x",
+    "babel-runtime": "6.x",
+    "choerodon-ui-font": "0.2.x",
+    "classnames": "~2.2.0",
+    "codemirror": "5.44.0",
+    "component-classes": "1.x",
+    "core-js": "^2.5.1",
+    "create-react-class": "^15.6.0",
+    "css-animation": "^1.2.5",
+    "dom-align": "1.x",
+    "dom-closest": "^0.2.0",
+    "dom-scroll-into-view": "1.x",
+    "draft-js": "^0.10.5",
+    "enquire.js": "^2.1.1",
+    "htmlhint": "0.10.x",
+    "is-negative-zero": "^2.0.0",
+    "js-yaml": "^3.12.2",
+    "jshint": "^2.10.1",
+    "jsonlint": "^1.6.3",
+    "mini-store": "^1.0.2",
+    "moment": "^2.19.3",
+    "mutationobserver-shim": "^0.3.2",
+    "prettier": "~1.16.4",
+    "prop-types": "15.6.0",
+    "querystringify": "^2.1.0",
+    "rc-editor-core": "~0.8.3",
+    "react-codemirror2": "5.1.0",
+    "react-lazy-load": "^3.0.12",
+    "react-slick": "~0.22.3",
+    "resize-observer-polyfill": "^1.5.1",
+    "rmc-feedback": "^1.0.0",
+    "string-template": "^1.0.0",
+    "tslib": "^1.9.3",
+    "warning": "~3.0.0"
+  },
+  "deprecated": false,
+  "description": "An enterprise-class UI design language and React-based implementation",
+  "devDependencies": {},
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "pro"
+  ],
+  "homepage": "https://github.com/baituo-china/baituo-ui/",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "baituo",
+    "design",
+    "react",
+    "react-component",
+    "component",
+    "components",
+    "ui",
+    "framework",
+    "frontend"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "components/**/*.tsx": [
+      "npm run lint-staged:ts"
+    ],
+    "{tests,site,scripts,components}/**/*.{js,jsx}": [
+      "npm run lint-staged:es"
+    ],
+    "{site,components}/**/*.less": "stylelint --syntax less",
+    "components/*/demo/*.md": [
+      "npm run lint-staged:demo"
+    ]
+  },
+  "main": "lib/index.js",
+  "main-pro": "pro/lib/index.js",
+  "module": "es/index.js",
+  "module-pro": "pro/es/index.js",
+  "name": "baituo-ui",
+  "peerDependencies": {
+    "axios": ">=0.18.0",
+    "react": ">=16.6.0",
+    "react-dom": ">=16.6.0",
+    "mobx": ">4.5.0 <4.8.0",
+    "mobx-react": ">=5.1.0",
+    "lodash": ">=4.17.0"
+  },
+  "repository": {
+  },
+  "scripts": {
+    "authors": "git log --format='%aN <%aE>' | sort -u | grep -v 'hand-china.com' > AUTHORS",
+    "clean:ts": "gulp clean:ts",
+    "compile": "gulp compile",
+    "deploy": "bisheng gh-pages --push-only",
+    "dist": "gulp dist",
+    "lint": "npm run lint:ts && npm run lint:es && npm run lint:demo && npm run lint:style",
+    "lint-fix": "npm run lint-fix:code && npm run lint-fix:demo",
+    "lint-fix:code": "eslint --fix tests site scripts components ./.eslintrc.js ./webpack.config.js --ext '.js,.jsx'",
+    "lint-fix:demo": "eslint-tinker ./components/*/demo/*.md",
+    "lint-fix:ts": "npm run tsc && npm run ts-lint-fix",
+    "lint-staged": "lint-staged",
+    "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
+    "lint-staged:es": "eslint ./.eslintrc.js ./webpack.config.js",
+    "lint-staged:ts": "tsc && tslint -c tslint.json",
+    "lint:demo": "cross-env RUN_ENV=DEMO eslint components/*/demo/*.md --ext '.md'",
+    "lint:es": "eslint tests site scripts components ./.eslintrc.js ./webpack.config.js --ext '.js,.jsx'",
+    "lint:style": "stylelint \"{site,components}/**/*.less\" --syntax less",
+    "lint:ts": "npm run tsc && npm run ts-lint",
+    "predeploy": "gulp clean && npm run site",
+    "prepublish": "gulp guard",
+    "pub": "npm run test-all && node ./scripts/prepub && npm publish --with-tools",
+    "site": "cross-env NODE_ENV=production bisheng build --ssr -c ./site/bisheng.config.js && node ./scripts/generateColorLess.js",
+    "site-dev": "cross-env NODE_ENV=development bisheng build --ssr -c ./site/bisheng.config.js && node ./scripts/generateColorLess.js",
+    "sort-api": "node ./scripts/sort-api-table.js",
+    "start": "rimraf _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=development BROWSER=chrome bisheng start -c ./site/bisheng.config.js",
+    "test": "jest --config .jest.js --debug",
+    "test-all": "sh ./scripts/test-all.sh",
+    "test-all-skip": "sh ./scripts/test-all.sh --skip",
+    "test-node": "jest --config .jest.node.js",
+    "ts-lint": "tslint -c tslint.json components/**/*.tsx",
+    "ts-lint-fix": "tslint -c tslint.json components/**/*.tsx --fix",
+    "tsc": "tsc"
+  },
+  "title": "Baituo UI",
+  "typings": "lib/index.d.ts",
+  "version": "0.8.3"
+}

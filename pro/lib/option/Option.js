@@ -1,0 +1,46 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var Option = function (_Component) {
+  (0, _inherits3['default'])(Option, _Component);
+
+  function Option() {
+    (0, _classCallCheck3['default'])(this, Option);
+    return (0, _possibleConstructorReturn3['default'])(this, (Option.__proto__ || Object.getPrototypeOf(Option)).apply(this, arguments));
+  }
+
+  return Option;
+}(_react.Component);
+
+exports['default'] = Option;
+
+Option.propTypes = {
+  /**
+   * 选项值
+   */
+  value: _propTypes2['default'].any
+};
+module.exports = exports['default'];

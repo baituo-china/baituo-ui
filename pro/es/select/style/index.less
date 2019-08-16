@@ -1,0 +1,25 @@
+@import "../../../../es/style/themes/default";
+@import "../../../../es/style/mixins/index";
+@import "../../trigger-field/style/mixin";
+@import "../../field/style/mixin";
+@import "./mixin";
+
+@select-prefix-cls: ~"@{c7n-pro-prefix}-select";
+@checkbox-prefix-cls: ~"@{c7n-prefix}-checkbox";
+
+.@{select-prefix-cls} {
+  .trigger;
+
+  margin: 0;
+
+  &-trigger {
+    transition: transform .3s;
+  }
+
+  &-expand &-trigger {
+    transform: rotate(180deg);
+  }
+  &-dropdown-menu {
+    .dropdown-menu;
+  }
+}

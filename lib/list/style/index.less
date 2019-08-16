@@ -1,0 +1,207 @@
+@import "../../style/themes/default";
+@import "../../style/mixins/index";
+
+@list-prefix-cls: ~"@{c7n-prefix}-list";
+
+.@{list-prefix-cls} {
+  .reset-component;
+  position: relative;
+  * {
+    outline: none;
+  }
+  &-pagination {
+    margin-top: .24rem;
+    text-align: right;
+  }
+  &-more {
+    margin-top: .12rem;
+    text-align: center;
+    button {
+      padding-left: .32rem;
+      padding-right: .32rem;
+    }
+  }
+  &-spin {
+    text-align: center;
+    min-height: .4rem;
+  }
+  &-empty-text {
+    color: @text-color-secondary;
+    font-size: @font-size-base;
+    padding: .16rem;
+    text-align: center;
+  }
+  &-item {
+    align-items: center;
+    display: flex;
+    padding-top: .12rem;
+    padding-bottom: .12rem;
+    &-meta {
+      align-items: flex-start;
+      display: flex;
+      flex: 1;
+      font-size: 0;
+      &-avatar {
+        margin-right: .16rem;
+      }
+      &-content {
+        flex: 1 0;
+      }
+      &-title {
+        color: @text-color;
+        margin-bottom: .04rem;
+        font-size: @font-size-base;
+        line-height: .22rem;
+        > a {
+          color: @text-color;
+          transition: all .3s;
+          &:hover {
+            color: @primary-color;
+          }
+        }
+      }
+      &-description {
+        color: @text-color-secondary;
+        font-size: @font-size-base;
+        line-height: .22rem;
+      }
+    }
+    &-content {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    &-content-single {
+      justify-content: flex-start;
+    }
+    &-action {
+      font-size: 0;
+      flex: 0 0 auto;
+      margin-left: .48rem;
+      padding: 0;
+      list-style: none;
+      & > li {
+        display: inline-block;
+        color: @text-color-secondary;
+        cursor: pointer;
+        padding: 0 .08rem;
+        position: relative;
+        font-size: @font-size-base;
+        line-height: .22rem;
+        text-align: center;
+      }
+      & > li:first-child {
+        padding-left: 0;
+      }
+      &-split {
+        background-color: @border-color-split;
+        margin-top: -.07rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: .01rem;
+        height: .14rem;
+      }
+    }
+    &-main {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  &-header,
+  &-footer {
+    padding-top: .12rem;
+    padding-bottom: .12rem;
+  }
+
+  &-empty {
+    color: @text-color-secondary;
+    padding: .16rem 0;
+    font-size: .12rem;
+    text-align: center;
+  }
+
+  &-split &-item {
+    border-bottom: .01rem solid @border-color-split;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &-split &-header {
+    border-bottom: .01rem solid @border-color-split;
+  }
+
+  &-loading &-spin-nested-loading {
+    min-height: .32rem;
+  }
+
+  &-something-after-last-item &-item:last-child {
+    border-bottom: .01rem solid @border-color-split;
+  }
+
+  &-lg &-item {
+    padding-top: .16rem;
+    padding-bottom: .16rem;
+  }
+
+  &-sm &-item {
+    padding-top: .08rem;
+    padding-bottom: .08rem;
+  }
+
+  &-vertical &-item {
+    display: block;
+    &-extra-wrap {
+      display: flex;
+    }
+    &-main {
+      display: block;
+      flex: 1;
+    }
+    &-extra {
+      margin-left: .58rem;
+    }
+    &-meta {
+      margin-bottom: .16rem;
+      &-avatar {
+        display: none;
+      }
+      &-title {
+        color: @heading-color;
+        margin-bottom: .12rem;
+        font-size: @font-size-lg;
+        line-height: .24rem;
+      }
+    }
+    &-content {
+      display: block;
+      color: @text-color;
+      font-size: @font-size-base;
+      margin-bottom: .16rem;
+    }
+    &-action {
+      margin-left: auto;
+      > li {
+        padding: 0 .16rem;
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &-grid &-item {
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: .2rem;
+    &-content {
+      display: block;
+    }
+  }
+}
+
+@import './bordered';
+@import './responsive';

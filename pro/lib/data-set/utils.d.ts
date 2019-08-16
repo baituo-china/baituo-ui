@@ -1,0 +1,37 @@
+import { AxiosRequestConfig } from 'axios';
+import Field, { FieldProps, Fields } from './Field';
+import { FieldType } from './enum';
+import DataSet from './DataSet';
+import Record from './Record';
+import { Supports } from '../locale-context/supports';
+import Transport, { TransportType } from './Transport';
+export declare function append(url: string, suffix?: object): string;
+export declare function getOrderFields(fields: Fields): Field[];
+export declare function processToJSON(value: any): any;
+export declare function processValue(value: any, field?: Field): any;
+export declare function childrenInfoForDelete(json: {}, children: {
+    [key: string]: DataSet;
+}): {};
+export declare function sortTree(children: Record[], orderField: Field): Record[];
+export declare function mergeTlsFields(fields: Fields, supports: Supports, fieldNames: string[]): (FieldProps & {
+    [key: string]: any;
+})[];
+export declare function checkParentByInsert({ parent }: DataSet): void;
+export declare function isSame(newValue: any, oldValue: any): boolean;
+export declare function isSameLike(newValue: any, oldValue: any): boolean;
+export declare function checkFieldType(value: any, field: Field): boolean;
+export declare function doExport(url: any, data: any): void;
+export declare function findBindFieldBy(myField: Field, fields: Fields, prop: string): Field | undefined;
+export declare function findBindFields(myField: Field, fields: Fields): Field[];
+export declare function findInvalidField(field: Field): Field;
+export declare function getFieldSorter(field: Field): (a: any, b: any) => number;
+export declare function getDateFormatByFieldType(type: FieldType): string;
+export declare function getDateFormatByField(field?: Field, type?: FieldType): string;
+export declare function generateJSONData(array: object[], record: Record, noCascade?: boolean): void;
+export declare function prepareSubmitData(records: Record[], noCascade?: boolean): [object[], object[], object[], object[]];
+declare type SubmitType = 'create' | 'update' | 'destroy' | 'submit';
+export declare function prepareForSubmit(type: SubmitType, data: object[], transport: Transport, configs: AxiosRequestConfig[], dataSet: DataSet): object[];
+export declare function axiosAdapter(config: TransportType, dataSet: DataSet, data?: any, params?: any): AxiosRequestConfig;
+export declare function generateResponseData(item: any, dataKey?: string): object[];
+export declare function getRecordValue(data: any, cb: (record: Record, fieldName: string) => boolean, fieldName?: string): any;
+export {};

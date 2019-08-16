@@ -1,0 +1,48 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-icon-select i.icon {
+  vertical-align: text-bottom;
+}
+.c7n-icon-select-dropdown {
+  min-width: 5.12rem;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-menu {
+  max-height: 3rem;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-menu i {
+  font-size: .3rem;
+  width: 100%;
+  text-align: center;
+  margin-top: .05rem;
+  display: inline-block;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-menu .text {
+  text-align: center;
+  text-overflow: ellipsis;
+  line-height: .18rem;
+  overflow: hidden;
+  margin-bottom: .05rem;
+  display: block;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-menu li {
+  padding: 0 .05rem !important;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-filter + div > .c7n-select-dropdown-menu li {
+  width: .85rem;
+  line-height: .28rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 .12rem;
+  margin: 0 .07rem;
+  cursor: pointer;
+  display: inline-block;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-filter + div > .c7n-select-dropdown-menu li i.icon {
+  vertical-align: text-bottom;
+}
+.c7n-icon-select-dropdown .c7n-select-dropdown-footer {
+  text-align: right;
+}

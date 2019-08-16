@@ -1,0 +1,38 @@
+import { AxiosInstance, AxiosRequestConfig } from 'axios';
+import { ReactNode } from 'react';
+import { LovConfig } from 'components-pro/lov/Lov';
+export declare type Config = {
+    prefixCls?: string;
+    proPrefixCls?: string;
+    ripple?: boolean;
+    lookupUrl?: string | ((code: string) => string);
+    lookupAxiosMethod?: string;
+    lovDefineUrl?: string | ((code: string) => string);
+    lovDefineAxiosConfig?: (code: string) => AxiosRequestConfig;
+    lovQueryUrl?: string | ((code: string, lovConfig?: LovConfig) => string);
+    lovQueryAxiosConfig?: (code: string, lovConfig?: LovConfig) => AxiosRequestConfig;
+    axios?: AxiosInstance;
+    dataKey?: string;
+    totalKey?: string;
+    labelLayout?: string;
+    queryBar?: string;
+    tableBorder?: boolean;
+    tableHighLightRow?: boolean;
+    tableRowHeight?: 'auto' | number;
+    tableColumnResizable?: boolean;
+    modalSectionBorder?: boolean;
+    modalOkFirst?: boolean;
+    buttonFuncType?: string;
+    renderEmpty?: (componentName?: string) => ReactNode;
+    generatePageQuery?: (pageParams: {
+        page?: number;
+        pageSize?: number;
+        sortName?: string;
+        sortOrder?: string;
+    }) => object;
+};
+export declare type ConfigKeys = keyof Config;
+export declare function getConfig<T extends ConfigKeys>(key: T): any;
+export declare function getPrefixCls(suffixCls: string, customizePrefixCls?: string): string;
+export declare function getProPrefixCls(suffixCls: string, customizePrefixCls?: string): string;
+export default function configure(config: Config): void;

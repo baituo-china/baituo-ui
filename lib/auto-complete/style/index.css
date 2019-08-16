@@ -1,0 +1,58 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-select-auto-complete {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.13rem;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.c7n-select-auto-complete.c7n-select .c7n-select-selection {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.c7n-select-auto-complete.c7n-select .c7n-select-selection__rendered {
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+}
+.c7n-select-auto-complete.c7n-select .c7n-select-selection--single {
+  height: auto;
+}
+.c7n-select-auto-complete.c7n-select .c7n-select-search--inline {
+  position: static;
+  float: left;
+}
+.c7n-select-auto-complete.c7n-select-allow-clear .c7n-select-selection:hover .c7n-select-selection__rendered {
+  margin-right: 0 !important;
+}
+.c7n-select-auto-complete.c7n-select .c7n-input {
+  background: transparent;
+}
+.c7n-select-auto-complete.c7n-select .c7n-input:focus,
+.c7n-select-auto-complete.c7n-select .c7n-input:hover {
+  border-color: #6374c2;
+}
+.c7n-select-auto-complete.c7n-select-lg .c7n-select-selection__rendered {
+  line-height: 0.4rem;
+}
+.c7n-select-auto-complete.c7n-select-lg .c7n-input {
+  padding-top: 0.06rem;
+  padding-bottom: 0.06rem;
+  height: 0.4rem;
+}
+.c7n-select-auto-complete.c7n-select-sm .c7n-select-selection__rendered {
+  line-height: 0.24rem;
+}
+.c7n-select-auto-complete.c7n-select-sm .c7n-input {
+  padding-top: 0.01rem;
+  padding-bottom: 0.01rem;
+  height: 0.24rem;
+}

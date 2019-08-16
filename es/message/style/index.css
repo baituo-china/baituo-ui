@@ -1,0 +1,87 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-message {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.13rem;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.c7n-message-notice {
+  padding: .08rem;
+  text-align: center;
+}
+.c7n-message-notice:first-child {
+  margin-top: -0.08rem;
+}
+.c7n-message-notice-content {
+  padding: .1rem .16rem;
+  border-radius: 0.02rem;
+  -webkit-box-shadow: 0 0.04rem 0.12rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0.04rem 0.12rem rgba(0, 0, 0, 0.12);
+  background: #fff;
+  display: inline-block;
+  pointer-events: all;
+}
+.c7n-message-success .icon {
+  color: #00bf96;
+}
+.c7n-message-error .icon {
+  color: #d50000;
+}
+.c7n-message-warning .icon {
+  color: #faad14;
+}
+.c7n-message-info .icon,
+.c7n-message-loading .icon {
+  color: #3f51b5;
+}
+.c7n-message .icon {
+  margin-right: .08rem;
+  font-size: 0.16rem;
+  top: .01rem;
+  position: relative;
+  vertical-align: top;
+}
+.c7n-message-notice.move-up-leave.move-up-leave-active {
+  -webkit-animation-name: MessageMoveOut;
+          animation-name: MessageMoveOut;
+  overflow: hidden;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+@-webkit-keyframes MessageMoveOut {
+  0% {
+    opacity: 1;
+    max-height: 1.5rem;
+    padding: .08rem;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+  }
+}
+@keyframes MessageMoveOut {
+  0% {
+    opacity: 1;
+    max-height: 1.5rem;
+    padding: .08rem;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+  }
+}

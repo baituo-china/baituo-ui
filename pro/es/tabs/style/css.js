@@ -1,0 +1,1 @@
+import '../../../../es/tabs/style/css';

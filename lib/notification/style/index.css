@@ -1,0 +1,235 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-notification {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.13rem;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  z-index: 1030;
+  width: 3.84rem;
+  max-width: calc(100vw - .32rem);
+  margin-right: .24rem;
+}
+.c7n-notification-topLeft,
+.c7n-notification-bottomLeft {
+  margin-left: .24rem;
+  margin-right: 0;
+}
+.c7n-notification-topLeft .c7n-notification-fade-enter.c7n-notification-fade-enter-active,
+.c7n-notification-bottomLeft .c7n-notification-fade-enter.c7n-notification-fade-enter-active,
+.c7n-notification-topLeft .c7n-notification-fade-appear.c7n-notification-fade-appear-active,
+.c7n-notification-bottomLeft .c7n-notification-fade-appear.c7n-notification-fade-appear-active {
+  -webkit-animation-name: NotificationLeftFadeIn;
+          animation-name: NotificationLeftFadeIn;
+}
+.c7n-notification-notice {
+  padding: 0.16rem 0.24rem;
+  border-radius: 0.02rem;
+  -webkit-box-shadow: 0 0.04rem 0.12rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0.04rem 0.12rem rgba(0, 0, 0, 0.12);
+  background: #fff;
+  line-height: 1.5;
+  position: relative;
+  margin-bottom: 0.16rem;
+  overflow: hidden;
+}
+.c7n-notification-notice-message {
+  font-size: 0.16rem;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: .08rem;
+  line-height: .24rem;
+  display: inline-block;
+}
+.c7n-notification-notice-message-single-line-auto-margin {
+  width: calc(3.84rem - 0.24rem * 2 - .24rem - .48rem - 100%);
+  background-color: transparent;
+  pointer-events: none;
+  display: block;
+  max-width: .04rem;
+}
+.c7n-notification-notice-message-single-line-auto-margin:before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+.c7n-notification-notice-description {
+  font-size: 0.13rem;
+}
+.c7n-notification-notice-closable .c7n-notification-notice-message {
+  padding-right: .24rem;
+}
+.c7n-notification-notice-with-icon .c7n-notification-notice-message {
+  font-size: 0.16rem;
+  margin-left: .48rem;
+  margin-bottom: .04rem;
+}
+.c7n-notification-notice-with-icon .c7n-notification-notice-description {
+  margin-left: .48rem;
+  font-size: 0.13rem;
+}
+.c7n-notification-notice-icon {
+  position: absolute;
+  font-size: .24rem;
+  line-height: .24rem;
+  margin-left: .04rem;
+}
+.c7n-notification-notice-icon-success {
+  color: #00bf96;
+}
+.c7n-notification-notice-icon-info {
+  color: #3f51b5;
+}
+.c7n-notification-notice-icon-warning {
+  color: #faad14;
+}
+.c7n-notification-notice-icon-error {
+  color: #d50000;
+}
+.c7n-notification-notice-close-x:after {
+  font-size: 0.13rem;
+  content: "\e633";
+  font-family: "anticon";
+  cursor: pointer;
+}
+.c7n-notification-notice-close {
+  position: absolute;
+  right: .22rem;
+  top: .16rem;
+  color: rgba(0, 0, 0, 0.45);
+  outline: none;
+}
+a.c7n-notification-notice-close:focus {
+  text-decoration: none;
+}
+.c7n-notification-notice-close:hover {
+  color: #404040;
+}
+.c7n-notification-notice-btn {
+  float: right;
+  margin-top: .16rem;
+}
+.c7n-notification .notification-fade-effect {
+  -webkit-animation-duration: 0.24s;
+          animation-duration: 0.24s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.c7n-notification-fade-enter,
+.c7n-notification-fade-appear {
+  opacity: 0;
+  -webkit-animation-duration: 0.24s;
+          animation-duration: 0.24s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.c7n-notification-fade-leave {
+  -webkit-animation-duration: 0.24s;
+          animation-duration: 0.24s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.c7n-notification-fade-enter.c7n-notification-fade-enter-active,
+.c7n-notification-fade-appear.c7n-notification-fade-appear-active {
+  -webkit-animation-name: NotificationFadeIn;
+          animation-name: NotificationFadeIn;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.c7n-notification-fade-leave.c7n-notification-fade-leave-active {
+  -webkit-animation-name: NotificationFadeOut;
+          animation-name: NotificationFadeOut;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+@-webkit-keyframes NotificationFadeIn {
+  0% {
+    opacity: 0;
+    left: 3.84rem;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes NotificationFadeIn {
+  0% {
+    opacity: 0;
+    left: 3.84rem;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes NotificationLeftFadeIn {
+  0% {
+    opacity: 0;
+    right: 3.84rem;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes NotificationLeftFadeIn {
+  0% {
+    opacity: 0;
+    right: 3.84rem;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes NotificationFadeOut {
+  0% {
+    opacity: 1;
+    margin-bottom: 0.16rem;
+    padding-top: 0.16rem 0.24rem;
+    padding-bottom: 0.16rem 0.24rem;
+    max-height: 1.5rem;
+  }
+  100% {
+    opacity: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0;
+  }
+}
+@keyframes NotificationFadeOut {
+  0% {
+    opacity: 1;
+    margin-bottom: 0.16rem;
+    padding-top: 0.16rem 0.24rem;
+    padding-bottom: 0.16rem 0.24rem;
+    max-height: 1.5rem;
+  }
+  100% {
+    opacity: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0;
+  }
+}

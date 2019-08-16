@@ -1,0 +1,85 @@
+@import "../../style/mixins/index";
+
+@sidebar-prefix-cls: ~"@{c7n-prefix}-modal-sidebar";
+@modal-prefix-cls: ~"@{c7n-prefix}-modal";
+
+.@{sidebar-prefix-cls} {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 0;
+  outline: 0;
+  opacity: 0;
+  width: 100%;
+  transform-origin: 100% 0% !important;
+
+  &&-open {
+    opacity: 1;
+  }
+  .@{modal-prefix-cls}-content {
+    left: 3.52rem;
+    position: absolute;
+    height: 100%;
+    padding: 0;
+    width: calc(~"100% - 3.52rem");
+    overflow: auto;
+  }
+
+  &-fixed-width {
+    right: 0;
+
+    .@{modal-prefix-cls}-content {
+      left: auto;
+      width: 100%;
+    }
+  }
+
+  .@{modal-prefix-cls}-header {
+    padding: 0 .08rem;
+    height: @sidebar-header-height;
+    min-height: @sidebar-header-height;
+    border-bottom: @border-width-base @border-style-base @border-color-base;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+
+    .@{modal-prefix-cls}-title {
+      font-size: @sidebar-font-size-lg;
+      letter-spacing: .005em;
+      line-height: .24rem;
+      margin: 0 .56rem 0 .16rem;
+    }
+  }
+
+  .@{modal-prefix-cls}-body {
+    font-size: 100%;
+    padding: .24rem;
+    position: relative;
+    overflow: auto;
+    max-height: calc(~"100% - 1.21rem") !important;
+  }
+
+  .@{modal-prefix-cls}-footer {
+    height: .56rem;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 .24rem;
+    border-top: @border-width-base @border-style-base @border-color-base;
+    button + button {
+      margin-left: .12rem;
+      margin-bottom: 0;
+    }
+    button.cancel {
+      color: @primary-color;
+    }
+    .@{modal-prefix-cls}-btn-cancel {
+      color: @primary-color;
+    }
+  }
+}

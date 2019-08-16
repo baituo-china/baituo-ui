@@ -1,0 +1,243 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-progress {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.13rem;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+.c7n-progress-line {
+  width: 100%;
+  font-size: 0.13rem;
+  position: relative;
+}
+.c7n-progress-small.c7n-progress-line,
+.c7n-progress-small.c7n-progress-line .c7n-progress-text .icon {
+  font-size: 0.12rem;
+}
+.c7n-progress-outer {
+  display: inline-block;
+  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+}
+.c7n-progress-show-info .c7n-progress-outer {
+  padding-right: calc(2em + .08rem);
+  margin-right: calc(-2em - .08rem);
+}
+.c7n-progress-inner {
+  display: inline-block;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  vertical-align: middle;
+  position: relative;
+}
+.c7n-progress-circle-trail {
+  stroke: #f5f5f5;
+}
+.c7n-progress-circle-path {
+  stroke: #3f51b5;
+  -webkit-animation: c7n-progress-appear 0.3s;
+          animation: c7n-progress-appear 0.3s;
+}
+.c7n-progress-success-bg,
+.c7n-progress-bg {
+  border-radius: 1rem;
+  background-color: #3f51b5;
+  -webkit-transition: all 0.4s cubic-bezier(0, 0, 0.2, 1) 0s;
+  transition: all 0.4s cubic-bezier(0, 0, 0.2, 1) 0s;
+  position: relative;
+}
+.c7n-progress-success-bg {
+  background-color: #00bf96;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.c7n-progress-text {
+  word-break: normal;
+  width: 2em;
+  text-align: left;
+  font-size: 1em;
+  margin-left: .08rem;
+  vertical-align: middle;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 1;
+}
+.c7n-progress-text .icon {
+  font-size: 0.13rem;
+}
+.c7n-progress-circle .c7n-progress-inner {
+  position: relative;
+  line-height: 1;
+  background-color: transparent;
+}
+.c7n-progress-circle .c7n-progress-text {
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  margin: 0;
+  color: #000000;
+}
+.c7n-progress-circle .c7n-progress-text .icon {
+  font-size: 1.16666667em;
+}
+.c7n-progress-loading .c7n-progress-inner {
+  background-color: transparent;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: .3rem;
+  height: .3rem;
+}
+.c7n-progress-loading .c7n-progress-inner svg {
+  -webkit-animation: c7n-progress-rotate 1.4s linear infinite;
+          animation: c7n-progress-rotate 1.4s linear infinite;
+}
+.c7n-progress-loading .c7n-progress-inner circle {
+  -webkit-animation: c7n-progress-loading 1.4s ease-in-out infinite;
+          animation: c7n-progress-loading 1.4s ease-in-out infinite;
+  stroke-width: 4;
+  stroke-dasharray: .08rem 2rem;
+  stroke-dashoffset: 0;
+  stroke: #3f51b5;
+  fill: none;
+}
+.c7n-progress-small.c7n-progress-loading .c7n-progress-inner {
+  width: .2rem;
+  height: .2rem;
+}
+.c7n-progress-large.c7n-progress-loading .c7n-progress-inner {
+  width: .5rem;
+  height: .5rem;
+}
+.c7n-progress-status-active .c7n-progress-bg:before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: .1rem;
+  -webkit-animation: c7n-progress-active 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+          animation: c7n-progress-active 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+.c7n-progress-status-exception .c7n-progress-bg {
+  background-color: #d50000;
+}
+.c7n-progress-status-exception .c7n-progress-text {
+  color: #d50000;
+}
+.c7n-progress-status-exception .c7n-progress-circle-path {
+  stroke: #d50000;
+}
+.c7n-progress-status-exception .c7n-progress-inner circle {
+  stroke: #d50000;
+}
+.c7n-progress-status-success .c7n-progress-bg {
+  background-color: #00bf96;
+}
+.c7n-progress-status-success .c7n-progress-text {
+  color: #00bf96;
+}
+.c7n-progress-status-success .c7n-progress-circle-path {
+  stroke: #00bf96;
+}
+.c7n-progress-status-success .c7n-progress-inner circle {
+  stroke: #00bf96;
+}
+@-webkit-keyframes c7n-progress-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes c7n-progress-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes c7n-progress-loading {
+  0% {
+    stroke-dasharray: .01rem 2rem;
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dasharray: 1rem 2rem;
+    stroke-dashoffset: -0.15rem;
+  }
+  100% {
+    stroke-dasharray: 1rem 2rem;
+    stroke-dashoffset: -1.2rem;
+  }
+}
+@keyframes c7n-progress-loading {
+  0% {
+    stroke-dasharray: .01rem 2rem;
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dasharray: 1rem 2rem;
+    stroke-dashoffset: -0.15rem;
+  }
+  100% {
+    stroke-dasharray: 1rem 2rem;
+    stroke-dashoffset: -1.2rem;
+  }
+}
+@-webkit-keyframes c7n-progress-active {
+  0% {
+    opacity: 0.1;
+    width: 0;
+  }
+  20% {
+    opacity: 0.5;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+@keyframes c7n-progress-active {
+  0% {
+    opacity: 0.1;
+    width: 0;
+  }
+  20% {
+    opacity: 0.5;
+    width: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-breadcrumb {
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.13rem;
+}
+.c7n-breadcrumb .icon {
+  font-size: 0.12rem;
+}
+.c7n-breadcrumb a {
+  color: rgba(0, 0, 0, 0.45);
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+.c7n-breadcrumb a:hover {
+  color: #6374c2;
+}
+.c7n-breadcrumb > span:last-child {
+  color: #000000;
+}
+.c7n-breadcrumb > span:last-child .c7n-breadcrumb-separator {
+  display: none;
+}
+.c7n-breadcrumb-separator {
+  margin: 0 0.08rem;
+  color: rgba(0, 0, 0, 0.45);
+}
+.c7n-breadcrumb-link > .icon + span {
+  margin-left: .04rem;
+}

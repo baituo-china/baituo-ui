@@ -1,0 +1,17 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+.c7n-pro-validation-message {
+  padding-left: .10rem;
+  font-size: .12rem;
+  color: #d50000;
+  white-space: nowrap;
+  max-width: unset;
+}
+.c7n-pro-validation-message > span {
+  vertical-align: middle;
+}
+.c7n-pro-validation-message > .icon {
+  margin-right: .08rem;
+}

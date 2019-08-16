@@ -1,0 +1,73 @@
+@import "../../../../lib/style/themes/default";
+@import "../../../../lib/style/mixins/index";
+
+@form-prefix-cls: ~"@{c7n-pro-prefix}-form";
+@field-prefix-cls: ~"@{c7n-pro-prefix}-field";
+@validation-prefix-cls: ~"@{c7n-pro-prefix}-validation-message";
+
+.make-form(@class: ~'') {
+  .@{form-prefix-cls} {
+    content: "@{class}";
+  }
+}
+
+.@{form-prefix-cls} {
+  &-header {
+    border-bottom: @border-width-base @border-style-base @border-color-base;
+    padding: .08rem;
+    font-size: .16rem;
+    font-weight: 400;
+    margin-bottom: .1rem;
+  }
+  > table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  > table > tbody > tr > td {
+    vertical-align: top;
+  }
+  &-float-label {
+    margin: 0 -0.05rem;
+    .@{form-prefix-cls}-header {
+      margin-left: .05rem;
+      margin-right: .05rem;
+    }
+    .@{field-prefix-cls}-wrapper {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: @form-item-margin-top;
+      margin-bottom: @form-item-margin-bottom;
+      // position: relative;
+    }
+    // .@{field-prefix-cls}-help,
+    // .@{validation-prefix-cls} {
+    //   position: absolute;
+    // }
+    .@{validation-prefix-cls} + .@{field-prefix-cls}-help {
+      display: none;
+    }
+  }
+}
+
+.make-form(xs);
+
+@media (min-width: @screen-sm-min) {
+  .make-form(sm);
+}
+
+@media (min-width: @screen-md-min) {
+  .make-form(md);
+}
+
+@media (min-width: @screen-lg-min) {
+  .make-form(lg);
+}
+
+@media (min-width: @screen-xl-min) {
+  .make-form(xl);
+}
+
+@media (min-width: @screen-xxl-min) {
+  .make-form(xxl);
+}
+
